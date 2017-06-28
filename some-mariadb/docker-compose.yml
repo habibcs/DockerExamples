@@ -1,0 +1,16 @@
+version: "2"
+services:
+  some-mariadb:
+    image: mariadb:5.5
+    command: mysqld --innodb-buffer-pool-size=20M
+    volumes:
+      - /home/centos/dbdata:/var/lib/mysql:rw
+    environment:
+      # - MYSQL_DATABASE=my_db_name
+      # - MYSQL_USER=my_db_user
+      # - MYSQL_PASSWORD=my_db_user_passwd
+      - MYSQL_ROOT_PASSWORD=Qur3sh1
+    ports:
+      - 3306:3306
+# volumes:
+  # data:
